@@ -1,10 +1,15 @@
-To run (and debug) in Visual Studio Code use the "Debug tod-api" in Debug options.
+To run (and debug) in Visual Studio Code use the "Debug todo-api" in Debug options:
+![VScode debug](images/vscode_debug.png)
 
-After the server starts, use http://localhost:3000/docs for swagger
+
+After the server starts, use http://localhost:3000/docs for swagger:
+![Swagger](images/swagger.png)
+
 
 Sample .env file for local debugging (using SQLite DB)
 =======================================================
-
+```.env
 PORT=3000
 DB_TYPE=sqlite
 DB_SQLITE_PATH=./sqlite/database.sqlite
+```
