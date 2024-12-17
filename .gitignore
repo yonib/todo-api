@@ -24,7 +24,7 @@ database.sqlite
 Thumbs.db
 
 # IDE/editor folders
-.vscode/
+# .vscode/
 .idea/
 *.sublime-workspace
 *.sublime-project

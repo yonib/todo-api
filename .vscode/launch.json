@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug Express App",
+        "type": "node",
+        "request": "launch",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/src/app.js",
+        "runtimeArgs": [
+          "--inspect-brk=8080"
+        ],
+        "outputCapture": "std"
+      }
+    ]
+  }
+  
