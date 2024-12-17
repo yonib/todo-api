@@ -10,7 +10,8 @@ After the server starts, open [http://localhost:3000/docs](http://localhost:3000
 
 ## Sample .env File for Local Debugging (Using SQLite DB)
 
-```bash
-.PORT=3000
+```env
+PORT=3000
 DB_TYPE=sqlite
 DB_SQLITE_PATH=./sqlite/database.sqlite
+```
