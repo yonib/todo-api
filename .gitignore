@@ -1,0 +1,47 @@
+# Node.js dependencies
+node_modules/
+
+# Log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+
+# Docker files
+.docker/
+docker-compose.override.yml
+
+# Sequelize migrations
+sequelize-cli/
+
+# Directory for SQLite database (if applicable)
+database.sqlite
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Optional: If you are using Jest or any other testing framework, ignore coverage reports
+coverage/
+
+# Optional: Ignore build artifacts
+dist/
+build/
+
+# Ignore lock files (optional, if you prefer to not track package-lock or yarn.lock)
+# package-lock.json
+# yarn.lock
+
+# Ignore temporary files (e.g., for linting tools)
+eslint-report.json
+
+# SQLite db
+sqlite/

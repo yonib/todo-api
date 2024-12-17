@@ -1,0 +1,79 @@
+version: "3.7"
+
+services:
+  todo-api:
+    build: .
+    container_name: todo-api
+    ports:
+      - "3000:3000"
+
+    # postgres-specific settings
+    #############################
+    # environment:
+    #   PORT: 3000
+    #   DB_USERNAME: my_db_username
+    #   DB_PASSWORD: my_db_password
+    #   DB_TYPE: postgres
+    #   DB_HOST: localhost
+    #   DB_PORT: 5432
+    # networks:
+    #   - db-network
+    # depends_on:
+    #   - db
+
+    # sql express specific settings
+    ################################
+    # environment:
+    #   DB_PASSWORD: my_db_password
+    #   DB_TYPE: mssql
+    #   DB_HOST: localhost
+    #   DB_PORT: 1433
+    # networks:
+    #   - db-network
+    # depends_on:
+    #   - db
+
+    # SQLite specific settings
+    #################################
+    environment:
+      PORT: 3000
+      DB_TYPE: sqlite
+      DB_SQLITE_PATH: ./sqlite/database.sqlite
+    volumes:
+      - ./docker-data/sqlite:/app/sqlite
+
+  # postgres DB Service
+  #############################
+  # db:
+  #   image: postgres
+  #   container_name: postgres-db
+  #   environment:
+  #     POSTGRES_USER: my_db_username
+  #     POSTGRES_PASSWORD: my_db_password
+  #     POSTGRES_DB: my_db_name
+  #   ports:
+  #     - "5432:5432"
+  #   networks:
+  #     - db-network
+  #   volumes:
+  #     - ./docker-data/postgres:/var/lib/postgresql/data
+
+  # SQL Server Express Service
+  ##############################
+  # db:
+  #   image: mcr.microsoft.com/mssql/server:2019-latest
+  #   container_name: sql-server-express
+  #   environment:
+  #     - ACCEPT_EULA=Y
+  #     - SA_PASSWORD=my_db_password
+  #   ports:
+  #     - "1433:1433"
+  #   networks:
+  #     - db-network
+  #   volumes:
+  #     - ./docker-data/sqlserver:/var/opt/mssql
+  #   condition: service_healthy  # Ensure the service is healthy before it runs
+
+networks:
+  db-network:
+    driver: bridge
