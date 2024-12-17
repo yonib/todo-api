@@ -1,3 +1,7 @@
+To run (and debug) in Visual Studio Code use the "Debug tod-api" in Debug options.
+
+After the server starts, use http://localhost:3000/docs for swagger
+
 Sample .env file for local debugging (using SQLite DB)
 =======================================================
 
