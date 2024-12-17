@@ -1,0 +1,6 @@
+Sample .env file for local debugging (using SQLite DB)
+=======================================================
+
+PORT=3000
+DB_TYPE=sqlite
+DB_SQLITE_PATH=./sqlite/database.sqlite
